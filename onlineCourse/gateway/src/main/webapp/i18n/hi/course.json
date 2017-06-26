@@ -1,0 +1,27 @@
+{
+    "gatewayApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "नया Course बनाएँ",
+                "createOrEditLabel": "Course बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Course [identifier: {{ param }}] तैयार है",
+            "updated": "एक Course [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Course [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Course [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "courseTitle": "Course Title",
+            "courseDescription": "Course Description",
+            "coursePrice": "Course Price",
+            "courseLevel": "Course Level",
+            "resources": "Resources",
+            "lessons": "Lessons",
+            "programs": "Programs"
+        }
+    }
+}

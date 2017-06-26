@@ -1,0 +1,25 @@
+{
+    "gatewayApp": {
+        "lesson" : {
+            "home": {
+                "title": "Lessons",
+                "createLabel": "नया Lesson बनाएँ",
+                "createOrEditLabel": "Lesson बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Lesson [identifier: {{ param }}] तैयार है",
+            "updated": "एक Lesson [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Lesson [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Lesson [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Lesson"
+            },
+            "lessonTitle": "Lesson Title",
+            "lessonDescription": "Lesson Description",
+            "language": "Language",
+            "resources": "Resources",
+            "courses": "Courses"
+        }
+    }
+}

@@ -1,0 +1,90 @@
+<div>
+    <h2>
+        <span jhiTranslate="gatewayApp.resource.home.title">Resources</span>
+        <button class="btn btn-primary float-right create-resource-my-suffix" [routerLink]="['/', { outlets: { popup: ['resource-my-suffix-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="gatewayApp.resource.home.createLabel">
+            Create new Resource
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="resources">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.resourceName">Resource Name</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.resourceDescription">Resource Description</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.resourceURL">Resource URL</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.resourcePreviewImage">Resource Preview Image</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.resourceType">Resource Type</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.weight">Weight</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.discipline">Discipline</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.program">Program</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.course">Course</span></th>
+            <th><span jhiTranslate="gatewayApp.resource.lesson">Lesson</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let resource of resources ;trackBy: trackId">
+                <td><a [routerLink]="['../resource-my-suffix', resource.id ]">{{resource.id}}</a></td>
+                <td>{{resource.resourceName}}</td>
+                <td>{{resource.resourceDescription}}</td>
+                <td>{{resource.resourceURL}}</td>
+                <td>{{resource.resourcePreviewImage}}</td>
+                <td jhiTranslate="{{'gatewayApp.ResourceType.' + resource.resourceType}}">{{resource.resourceType}}</td>
+                <td>{{resource.weight}}</td>
+                <td>
+                    <div *ngIf="resource.disciplineId">
+                        <a [routerLink]="['../discipline-my-suffix', resource.disciplineId  ]" >{{resource.disciplineId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="resource.programId">
+                        <a [routerLink]="['../program-my-suffix', resource.programId  ]" >{{resource.programId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="resource.courseId">
+                        <a [routerLink]="['../course-my-suffix', resource.courseId  ]" >{{resource.courseId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="resource.lessonId">
+                        <a [routerLink]="['../lesson-my-suffix', resource.lessonId  ]" >{{resource.lessonId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../resource-my-suffix', resource.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'resource-my-suffix/'+ resource.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'resource-my-suffix/'+ resource.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+    "gatewayApp": {
+        "program" : {
+            "home": {
+                "title": "Programs",
+                "createLabel": "नया Program बनाएँ",
+                "createOrEditLabel": "Program बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Program [identifier: {{ param }}] तैयार है",
+            "updated": "एक Program [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Program [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Program [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Program"
+            },
+            "programName": "Program Name",
+            "programDescription": "Program Description",
+            "programPrice": "Program Price",
+            "resources": "Resources",
+            "courses": "Courses",
+            "disciplines": "Disciplines"
+        }
+    }
+}

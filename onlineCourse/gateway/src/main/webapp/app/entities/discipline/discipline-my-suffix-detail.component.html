@@ -1,0 +1,39 @@
+
+<div *ngIf="discipline">
+    <h2><span jhiTranslate="gatewayApp.discipline.detail.title">Discipline</span> {{discipline.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gatewayApp.discipline.disciplineName">Discipline Name</span></dt>
+        <dd>
+            <span>{{discipline.disciplineName}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.discipline.disciplineDescription">Discipline Description</span></dt>
+        <dd>
+            <span>{{discipline.disciplineDescription}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.discipline.disciplinePrice">Discipline Price</span></dt>
+        <dd>
+            <span>{{discipline.disciplinePrice}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.discipline.programs">Programs</span></dt>
+        <dd>
+            <span *ngFor="let programs of discipline.programs; let last = last">
+                <a [routerLink]="['/program-my-suffix', programs?.id ]">{{programs.id}}</a>{{last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'discipline-my-suffix/'+ discipline.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

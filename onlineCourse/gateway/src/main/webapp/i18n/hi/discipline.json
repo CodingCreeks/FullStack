@@ -1,0 +1,25 @@
+{
+    "gatewayApp": {
+        "discipline" : {
+            "home": {
+                "title": "Disciplines",
+                "createLabel": "नया Discipline बनाएँ",
+                "createOrEditLabel": "Discipline बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Discipline [identifier: {{ param }}] तैयार है",
+            "updated": "एक Discipline [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Discipline [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Discipline [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Discipline"
+            },
+            "disciplineName": "Discipline Name",
+            "disciplineDescription": "Discipline Description",
+            "disciplinePrice": "Discipline Price",
+            "resources": "Resources",
+            "programs": "Programs"
+        }
+    }
+}

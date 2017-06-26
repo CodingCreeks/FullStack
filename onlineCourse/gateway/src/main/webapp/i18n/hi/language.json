@@ -1,0 +1,10 @@
+{
+    "gatewayApp": {
+        "Language" : {
+            "null": "",
+            "ENGLISH": "ENGLISH",
+            "SPANISH": "SPANISH",
+            "GERMAN": "GERMAN"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "gatewayApp": {
+        "Level" : {
+            "null": "",
+            "NOVOICE": "NOVOICE",
+            "BEGINNER": "BEGINNER",
+            "INTERMEDIATE": "INTERMEDIATE",
+            "ADVANCED": "ADVANCED",
+            "PROFESSIONAL": "PROFESSIONAL"
+        }
+    }
+}
